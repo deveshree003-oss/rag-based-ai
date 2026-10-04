@@ -24,10 +24,10 @@ if not os.path.exists(JSON_OUTPUT_DIR):
 audio_files = [f for f in os.listdir(AUDIO_DIR) if f.lower().endswith(('.mp3', '.wav'))]
 
 if not audio_files:
-    print(f"❌ Error: No audio files found in the '{AUDIO_DIR}' folder!")
+    print(f" Error: No audio files found in the '{AUDIO_DIR}' folder!")
     sys.exit()
 
-print(f"🚀 Batch processing started for all {len(audio_files)} files...\n")
+print(f" Batch processing started for all {len(audio_files)} files...\n")
 
 for idx, filename in enumerate(audio_files, 1):
     audio_path = os.path.join(AUDIO_DIR, filename)
@@ -38,10 +38,10 @@ for idx, filename in enumerate(audio_files, 1):
     
     # Skip processing if this JSON file already exists to save time!
     if os.path.exists(output_json_path):
-        print(f"[{idx}/{len(audio_files)}] ⏩ Skipping (already exists): {output_json_name}")
+        print(f"[{idx}/{len(audio_files)}]  Skipping (already exists): {output_json_name}")
         continue
 
-    print(f"[{idx}/{len(audio_files)}] 🔄 Extracting speech segments for: {filename}...")
+    print(f"[{idx}/{len(audio_files)}] Extracting speech segments for: {filename}...")
     result = model.transcribe(audio=audio_path, language="en", fp16=False)
     
     # --- Advanced Filename Parsing Cleanup ---
@@ -85,4 +85,4 @@ for idx, filename in enumerate(audio_files, 1):
         
     print(f"✓ Successfully saved: {output_json_path}\n")
 
-print("🎉 Complete! All video lecture JSON chunk logs are ready inside 'jsons/'.")
+print(" Complete! All video lecture JSON chunk logs are ready inside 'jsons/'.")
