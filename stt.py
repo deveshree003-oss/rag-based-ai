@@ -24,7 +24,7 @@ if not os.path.exists(OUTPUT_DIR):
 audio_files = [f for f in os.listdir(AUDIO_DIR) if f.lower().endswith(('.mp3', '.wav'))]
 
 if not audio_files:
-    print(f"❌ No files found in the '{AUDIO_DIR}' folder!")
+    print(f" No files found in the '{AUDIO_DIR}' folder!")
     sys.exit()
 
 print(f"Processing {len(audio_files)} files locally...\n")
@@ -44,4 +44,4 @@ for idx, file in enumerate(audio_files, 1):
         
     print(f"✓ Saved transcript to: {output_txt_path}\n")
 
-print("🎉 Local folder clone batch transcription complete!")
+print(" Local folder clone batch transcription complete!")
