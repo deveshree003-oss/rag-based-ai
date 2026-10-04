@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+
+
+# Generated files
+embeddings.joblib
+prompt.txt
+response.txt
+
+# Local/model data
+audios/
+videos/
+transcripts/
+jsons/
+whisper/
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db
+# Local Whisper source
+whisper/
