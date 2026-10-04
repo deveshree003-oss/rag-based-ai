@@ -3,10 +3,10 @@
 Move all your video files to the videos folder
 
 ## Step 2 - Convert to mp3
-Convert all the video files to mp3 by ruunning videotomp3
+Convert all the video files to mp3 by running videotomp3
 
 ## Step 3 - Convert mp3 to json 
-Convert all the mp3 files to json by ruunning mp3tojson
+Convert all the mp3 files to json by running mp3tojson
 
 ## Step 4 - Convert the json files to Vectors
 Use the file preprocessjson to convert the json files to a dataframe with Embeddings and save it as a joblib pickle
