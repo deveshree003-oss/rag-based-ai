@@ -24,10 +24,10 @@ model = WhisperModel(MODEL_SIZE, device="cuda", compute_type="int8_float16")
 audio_files = [f for f in os.listdir(AUDIO_DIR) if f.lower().endswith(('.mp3', '.wav'))]
 
 if not audio_files:
-    print("❌ No files found in the 'audios' directory!")
+    print(" No files found in the 'audios' directory!")
     sys.exit()
 
-print(f"🚀 Found {len(audio_files)} files. Starting blazing-fast GPU transcription...\n")
+print(f" Found {len(audio_files)} files. Starting blazing-fast GPU transcription...\n")
 
 for idx, file in enumerate(audio_files, 1):
     audio_path = os.path.join(AUDIO_DIR, file)
@@ -48,4 +48,4 @@ for idx, file in enumerate(audio_files, 1):
             
     print(f"✓ Saved transcript to: {output_txt_path}\n")
 
-print("🎉 Blazing-fast GPU batch transcription complete!")
+print(" Blazing-fast GPU batch transcription complete!")
